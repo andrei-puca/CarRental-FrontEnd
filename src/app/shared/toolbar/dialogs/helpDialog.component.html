@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>{{ "help.edit" | translate }}</h1>
+<div mat-dialog-content>
+  <mat-form-field class="full-width">
+    <input type="url" placeholder="Url" matInput [(ngModel)]="hyperlink" />
+    <button mat-button *ngIf="hyperlink" matSuffix mat-icon-button aria-label="Clear" (click)="hyperlink = ''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions class="align-right">
+  <button mat-button color="primary" (click)="save()">{{ "help.save" | translate }}</button>
+  <button mat-button color="warn" (click)="close()">{{ "help.cancel" | translate }}</button>
+</div>

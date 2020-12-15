@@ -1,0 +1,38 @@
+<div>
+  <div fxFlex="75" class="col-9" fxLayout="column" fxLayoutAlign="center space-evenly">
+    <div *ngIf="title" [class]="options.titleClass" [attr.aria-label]="title">
+      {{ title }}
+    </div>
+
+    <div
+      *ngIf="message && options.enableHtml"
+      role="alert"
+      aria-live="polite"
+      [class]="options.messageClass"
+      [innerHTML]="message"
+    ></div>
+
+    <div
+      *ngIf="message && !options.enableHtml"
+      role="alert"
+      aria-live="polite"
+      [class]="options.messageClass"
+      [attr.aria-label]="message"
+    >
+      {{ message }}
+    </div>
+  </div>
+
+  <div fxFlex="25" class="col-3 text-right">
+    <a *ngIf="options.closeButton" (click)="remove()" class="btn btn-black btn-sm">
+      <i style="text-decoration:underline;">close</i>
+    </a>
+
+    <button mat-button (click)="onAction()">{{ yes }}</button>
+    <button mat-button (click)="onDecline()">{{ no }}</button>
+  </div>
+</div>
+
+<div *ngIf="options.progressBar">
+  <div class="toast-progress" [style.width]="width + '%'"></div>
+</div>

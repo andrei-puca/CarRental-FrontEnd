@@ -1,0 +1,96 @@
+{
+  "nav": {
+    "home": "Startpagina",
+    "heroes": "Helden",
+    "about": "Aangaande",
+    "aboutUs": "Over ons (met bg)",
+    "version": "Versie",
+    "contextmenus": "Rechterklik",
+    "perfectscrollbar": "Perfect Scrollbar",
+    "hiddenByChildren": "verborgen door children"
+  },
+  "home": {
+    "title": "Startpagina",
+    "helloWorld": "Hallo van de startpagina!",
+    "homeToolbar": "Je hebt op de startpagina werkbalk button geklikt.",
+    "stateExample": "State engine voorbeeld",
+    "globalState": "Globale app state",
+    "newStateValue": "nieuwe state waarde"
+  },
+  "heroes": {
+    "title": "Helden",
+    "subtitle": "Al onze helden in een leuk tabelletje",
+    "tip": "psst: probeer eens <code>alt+shift+s</code> uit op je keyboard",
+    "includeSkills": "Toon vaardigheden",
+    "id": "Id",
+    "name": "Naam",
+    "skill": "Vaardigheden",
+    "details": "details",
+    "shazam": "Shazam! Je hebt een sneltoets ingedrukt!",
+    "fetched": "Helden opgehaald!",
+    "sayHi": "Zeg hallo!",
+    "helloUser": "Hallo gebruiker!",
+    "hotkeySave": "alt+s om op te slaan"
+  },
+  "toasters": {
+    "defaultBtn": "Standaard",
+    "optionsBtn": "Opties",
+    "1clickBtn": "1klik",
+    "actionsBtn": "Handelingen",
+    "standardToasts": "Standaard toasts",
+    "customToasts": "Aangepaste toasts",
+    "defaultTitle": "Een standaard toast",
+    "defaultMessage": "Dit is een standaard toast",
+    "actionTitle": "Handeling toast",
+    "actionMessage": "Dit is een standaard toast met een handeling",
+    "buttonTitle": "Knop toast",
+    "buttonMessage": "Dit is een standaard toast met een 1 klik button",
+    "optionsTitle": "Opties toast",
+    "optionsMessage": "Dit is een standaard toast met verschillende opties",
+    "helloWorld": "Hallo wereld!",
+    "mailSent": "Je mail is verzonden!",
+    "cancelMailing": "Je hebt je mailing geannuleerd",
+    "click": "Ga"
+  },
+  "perfectScrollbar": {
+    "explanation": "Alle elementen met een streepjes lijn op deze pagina kan je scrollen.",
+    "basicExample": "Hieronder is een eenvoudig voorbeeld van een scrollable container waar gebruikt wordt gemaakt van een <b>element</b> directive van Perfect Scrollbar",
+    "advancedExample": "Hieronder vindt je een geavanceerder voorbeeld van een scrollable container waar gebruikt wordt gemaakt van de <b>attribuut</b> directive van NGX Perfect Scrollbar",
+    "advancedExampleDescription": "Om een scrollable container op te zetten moet je bovenliggende container met een specifieke hoogte instellen.<br />De hoogte moet ook 100% zijn op het element met de directive en een relatieve positie hebben.",
+    "customExample": "We gebruiken hier een aantal functies die ons controle geven over eigenschappen zoals scrollToX en scrollToY."
+  },
+  "others": {
+    "submit": "Verzenden",
+    "back": "Vorige",
+    "helpBtn": "Je hebt om hulp gevraagd.",
+    "cancel": "Annuleer",
+    "noFunc": "Er is geen functie meegegeven",
+    "noToast": "Er is geen toast meegegeven",
+    "noLink": "Er is geen Hyperlink meegegeven"
+  },
+  "idMenu": {
+    "login": "Inloggen",
+    "logout": "Uitloggen",
+    "loggedIn": "Gebruiker ingelogd"
+  },
+  "help": {
+    "edit": "Aanpassen",
+    "save": "Opslaan",
+    "cancel": "Annuleren",
+    "linkChanged": "Link is opgeslagen"
+  },
+  "hotkey": {
+    "cheatsheet": "Druk op shift + '/?' om de shortcut cheatsheet te openen"
+  },
+  "inputs": {
+    "title": "Inputs",
+    "timepicker": "Tijd kiezer",
+    "datepicker": "Datum kiezer",
+    "chooseADate": "Kies een datum"
+  },
+  "auth": {
+    "demo": "Log in met het account knopje rechtsbovenin, daarna zal het heroes menu bij de navigatie zichtbaar worden",
+    "unauthorizedError": "Ongeautoriseerd",
+    "unauthorizedMessage": "U heeft geen rechten tot deze pagina. <br /> Als u niet ingelogd bent kunt u dat doen door rechtsboven op het persoon icoon te klikken."
+  }
+}

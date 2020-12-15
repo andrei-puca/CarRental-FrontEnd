@@ -1,0 +1,20 @@
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "~@angular/material/theming";
+@import "../../../../styles/variables";
+
+:host {
+  background-color: $primary;
+  background-image: url(../../../../assets/icon.png);
+}
+// Title
+.toast-title {
+  color: #ffffff;
+}
+// Main message body
+.toast-message {
+  color: #ffffff;
+}
+// Shows the time before toast disappears
+.toast-progress {
+  background-color: #ffffff;
+}

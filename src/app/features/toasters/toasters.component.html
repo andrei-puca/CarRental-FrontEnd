@@ -1,0 +1,38 @@
+<app-toolbar>
+  <span ngProjectAs="title">Toasters</span>
+</app-toolbar>
+
+<!-- content wrapper -->
+<div class="content">
+  <h1 class="mat-display-1">Toasters</h1>
+
+  <div fxLayout="column" fxLayoutAlign="center start">
+    <p>{{ "toasters.standardToasts" | translate }}</p>
+
+    <button mat-raised-button class="toast-btn toast-button-info" (click)="showToast('info')">Info</button>
+
+    <button mat-raised-button class="toast-btn toast-button-success" (click)="showToast('success')">Success</button>
+
+    <button mat-raised-button class="toast-btn toast-button-warning" (click)="showToast('warning')">Warning</button>
+
+    <button mat-raised-button class="toast-btn toast-button-error" (click)="showToast('error')">Error</button>
+
+    <p>{{ "toasters.customToasts" | translate }}</p>
+
+    <button mat-raised-button class="toast-btn toast-button-default" (click)="showDefaultToast()">
+      {{ "toasters.defaultBtn" | translate }}
+    </button>
+
+    <button mat-raised-button class="toast-btn" style="color:#000000" (click)="showOptionsToast()">
+      {{ "toasters.optionsBtn" | translate }}
+    </button>
+
+    <button mat-raised-button class="toast-btn" style="color:#000000" (click)="showActionToast()">
+      {{ "toasters.1clickBtn" | translate }}
+    </button>
+
+    <button mat-raised-button class="toast-btn" style="color:#000000" (click)="showActionToastTwo()">
+      {{ "toasters.actionsBtn" | translate }}
+    </button>
+  </div>
+</div>

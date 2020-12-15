@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "downlevelIteration": true,
+    "target": "es2015",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "noEmitHelpers": true,
+    "importHelpers": true,
+    "strictNullChecks": false,
+    "lib": ["es2015", "es2018", "es7", "dom"],
+    "skipLibCheck": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@angular/*": ["../node_modules/@angular/*"]
+    },
+    "types": ["hammerjs", "node", "jasmine", "node", "uglify-js", "webpack"]
+  },
+  "exclude": ["node_modules", "dist", "src/**/*.e2e.ts", "src/**/*.spec.ts"],
+  "angularCompilerOptions": {
+    "skipMetadataEmit": true
+  },
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "atom": {
+    "rewriteTsconfig": false
+  },
+  "awesomeTypescriptLoaderOptions": {
+    "forkChecker": true,
+    "useWebpackText": true
+  }
+}

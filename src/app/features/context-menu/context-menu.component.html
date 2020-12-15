@@ -1,0 +1,89 @@
+<app-toolbar>
+  <span ngProjectAs="title">Context menus</span>
+</app-toolbar>
+
+<!-- content wrapper -->
+<div class="content">
+  <h1 class="mat-display-1">Context menus</h1>
+
+  <p>
+    This page demos the context menu code, right click either the icon or a row in the table to show a context menu.
+  </p>
+
+  <!-- button with rightclick menu -->
+  <span
+    id="iconMenu"
+    class="contextmenu"
+    [matMenuTriggerFor]="contextMenu"
+    [style.left.px]="menuLeft"
+    [style.top.px]="menuTop"
+  ></span>
+  <mat-menu #contextMenu="matMenu">
+    <button mat-menu-item (click)="openGoogle()">Google</button>
+  </mat-menu>
+  <button mat-icon-button name="rightclickbutton" (contextmenu)="openContextMenu($event, 'iconMenu')">
+    <mat-icon>home</mat-icon>
+  </button>
+
+  <!-- button with rightclick menu which has subitems -->
+  <span
+    id="submenu"
+    class="contextmenu"
+    [matMenuTriggerFor]="submenu"
+    [style.left.px]="menuLeft"
+    [style.top.px]="menuTop"
+  ></span>
+  <button mat-icon-button (contextmenu)="openContextMenu($event, 'submenu')" mat-button [matMenuTriggerFor]="submenu">
+    <mat-icon>android</mat-icon>
+  </button>
+
+  <mat-menu #submenu="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="vertebrates">Submenu</button>
+    <button mat-menu-item>value</button>
+  </mat-menu>
+  <mat-menu #vertebrates="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="fish">Subsubmenu</button>
+    <button mat-menu-item>value</button>
+  </mat-menu>
+  <mat-menu #fish="matMenu">
+    <button mat-menu-item>value</button>
+  </mat-menu>
+
+  <!-- Table menu + table -->
+  <span
+    id="tableMenu"
+    class="contextmenu"
+    [matMenuTriggerFor]="tableMenu"
+    [style.left.px]="menuLeft"
+    [style.top.px]="menuTop"
+  ></span>
+  <mat-menu #tableMenu="matMenu" id="test">
+    <button mat-menu-item (click)="openCurrentInTab()">
+      <mat-icon>tab</mat-icon>
+      <span>This tab</span>
+    </button>
+    <button mat-menu-item (click)="openCurrentInNewTab()">
+      <mat-icon>photo_library</mat-icon>
+      <span>New tab</span>
+    </button>
+  </mat-menu>
+  <table mat-table [dataSource]="urls" matSort class="mat-elevation-z8 full-width margin-top">
+    <!-- id Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
+      <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="url">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>url</th>
+      <td mat-cell *matCellDef="let element">{{ element.url }}</td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr
+      mat-row
+      *matRowDef="let row; columns: displayedColumns"
+      (contextmenu)="openContextMenu($event, 'tableMenu', row)"
+    ></tr>
+  </table>
+</div>

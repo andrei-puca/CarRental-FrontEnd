@@ -1,0 +1,60 @@
+.perfect-scrollbar-page {
+  padding: 16px;
+}
+
+.perfect-scrollbar-container {
+  height: 300px;
+  max-height: 225px;
+  max-width: 210px;
+  border: 2px dashed black;
+  margin: 16px 8px;
+
+  .lorem-ipsum-spacing {
+    margin: 8px 16px;
+
+    &.with-width {
+      width: 500px;
+    }
+  }
+}
+
+.directive-container {
+  position: relative;
+  height: 100%;
+}
+
+.scrollbar-with-buttons {
+  display: flex;
+  width: 500px;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+
+    .form-inputs {
+      display: flex;
+      flex-direction: row;
+
+      input {
+        width: 50%;
+      }
+    }
+
+    .hr {
+      border-top: 1px solid black;
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      margin: 5px 0;
+
+      &:first-child {
+        margin-top: 15px;
+      }
+    }
+  }
+}

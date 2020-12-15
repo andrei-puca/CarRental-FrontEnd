@@ -1,0 +1,16 @@
+export const APPROUTES = {
+  cars: "cars",
+  client: "client",
+  home: "",
+  heroes: "heroes",
+  toasters: "toasters",
+  inputs: "inputs",
+  about: "about",
+  aboutus: "about/us",
+  aboutversion: "about/version",
+  contextmenus: "contextmenus",
+  perfectscrollbar: "perfectscrollbar",
+  forbidden: "forbidden",
+  unauthorized: "unauthorized",
+  catchAll: "**",
+};

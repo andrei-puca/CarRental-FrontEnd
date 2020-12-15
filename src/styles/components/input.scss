@@ -1,0 +1,26 @@
+.time-picker {
+  background: rgba(0, 0, 0, 0);
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.42) !important;
+}
+
+.time-picker-btn {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.time-picker-btn.cdk-focused {
+  color: $primary;
+}
+
+// time-picker-clock styling
+.time-picker-clock .active,
+.time-picker-clock-arrow,
+.time-picker-clock-origin {
+  background: $primary !important;
+}
+
+// .single-line{
+//   :after{
+//     content: "\A"
+//   }
+// }

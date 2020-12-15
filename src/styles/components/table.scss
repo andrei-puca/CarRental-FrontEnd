@@ -1,0 +1,10 @@
+td {
+  &.mat-cell {
+    padding-right: 20px !important;
+  }
+}
+
+.mat-row:hover {
+  background-color: $gray;
+  cursor: pointer;
+}

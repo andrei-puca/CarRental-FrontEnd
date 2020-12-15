@@ -1,0 +1,45 @@
+// vendor styles
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "~@angular/material/theming";
+@import "~normalize.css/normalize.css";
+@import "~ngx-toastr/toastr.css";
+
+// mixins
+@import "variables";
+
+// components
+@import "./components/content-wrappers.scss";
+@import "./components/contextmenu.scss";
+@import "./components/headers.scss";
+@import "./components/input.scss";
+@import "./components/margins.scss";
+@import "./components/sidebar";
+@import "./components/table.scss";
+@import "./components/toolbar.scss";
+
+// import roboto font file (in it you can specify which fonts)
+@import "./roboto.scss";
+
+// perfect-scrollbar.css is required for the use of the ngx-perfect-scrollbar directive
+@import "~perfect-scrollbar/css/perfect-scrollbar.css";
+
+// root style
+* {
+  font-family: "Roboto", "monospace";
+  font-weight: 300;
+}
+
+html,
+body {
+  height: 100%;
+  max-height: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+// angular-material has it's own focus rules
+*:focus {
+  outline: 0px solid black;
+}

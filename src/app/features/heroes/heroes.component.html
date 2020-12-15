@@ -1,0 +1,39 @@
+<app-toolbar>
+  <span ngProjectAs="title">Heroes!</span>
+</app-toolbar>
+<mat-card class="content">
+  <h1 class="mat-display-1">{{ "heroes.title" | translate }}</h1>
+  <h2 class="mat-h2">
+    {{ "heroes.subtitle" | translate }}
+    <br />
+    <!--  if the translated value includes html we can use [innerHTML] so the html will be parsed. (script will be ignored) -->
+    <sub [innerHTML]="'heroes.tip' | translate"></sub>
+  </h2>
+
+  <mat-slide-toggle [checked]="true" (change)="toggleSkills($event)">
+    {{ "heroes.includeSkills" | translate }}
+  </mat-slide-toggle>
+
+  <table mat-table [dataSource]="heroes" matSort class="mat-elevation-z8 full-width margin-top">
+    <!-- id Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>{{ "heroes.id" | translate }}</th>
+      <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>{{ "heroes.name" | translate }}</th>
+      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    </ng-container>
+
+    <!-- Skill Column -->
+    <ng-container matColumnDef="skill">
+      <th mat-header-cell *matHeaderCellDef>{{ "heroes.skill" | translate }}</th>
+      <td mat-cell *matCellDef="let element">{{ element.skill }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns" (click)="open(row)"></tr>
+  </table>
+</mat-card>

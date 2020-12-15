@@ -1,0 +1,24 @@
+<app-toolbar>
+  <span ngProjectAs="title">Hero details</span>
+</app-toolbar>
+<div class="content" *ngIf="hero">
+  <h1 class="mat-display-1">{{ hero.name | uppercase }}'s {{ "heroes.details" | translate }}</h1>
+  <form class="hero-form">
+    <mat-form-field>
+      <input matInput placeholder="Id" disabled value="{{ hero.id }}" />
+    </mat-form-field>
+
+    <br />
+    <mat-form-field>
+      <input matInput [(ngModel)]="hero.name" name="name field" placeholder="{{ 'heroes.name' | translate }}" />
+    </mat-form-field>
+
+    <br />
+    <mat-form-field class="full-width">
+      <input matInput [(ngModel)]="hero.skill" name="skill field" placeholder="{{ 'heroes.skill' | translate }}" />
+    </mat-form-field>
+  </form>
+  <button matTooltip="{{ 'heroes.hotkeySave' | translate }}" mat-raised-button color="accent" (click)="goBack()">
+    <mat-icon>keyboard_arrow_left</mat-icon> {{ "others.back" | translate }}
+  </button>
+</div>

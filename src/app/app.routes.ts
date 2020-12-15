@@ -1,0 +1,32 @@
+import { Routes } from "@angular/router";
+import { HomeComponent } from "./features/home";
+
+import { HERO_ROUTES } from "./features/heroes/heroes.routes";
+import { APPROUTES } from "./app.routes.strings";
+import { ABOUT_ROUTES } from "./features/about/about.routes";
+import { CONTEXT_MENU_ROUTES } from "./features/context-menu/contextmenu.routes";
+import { TOASTERS_ROUTES } from "./features/toasters/toasters.routes";
+import { INPUTS_ROUTES } from "./features/inputs/inputs.routes";
+import { PERFECT_SCROLLBAR_ROUTES } from "./features/perfect-scrollbar/perfectscrollbar.routes";
+import { UnauthorizedComponent } from "./infrastructure/oidc/unauthorized/unauthorized.component";
+import { CLIENT_ROUTES } from './features/client/client.routes';
+import { CARS_ROUTES } from './features/cars/cars.routes';
+
+export const ROUTES: Routes = [
+  { path: APPROUTES.home, component: HomeComponent },
+
+  // feature routes
+  ...CARS_ROUTES,
+  ...CLIENT_ROUTES,
+  ...HERO_ROUTES,
+  ...ABOUT_ROUTES,
+  ...CONTEXT_MENU_ROUTES,
+  ...TOASTERS_ROUTES,
+  ...INPUTS_ROUTES,
+  ...PERFECT_SCROLLBAR_ROUTES,
+
+  // unauthorized
+  { path: APPROUTES.unauthorized, component: UnauthorizedComponent },
+  // else... 404 -> redirect home
+  { path: APPROUTES.catchAll, redirectTo: "/" },
+];

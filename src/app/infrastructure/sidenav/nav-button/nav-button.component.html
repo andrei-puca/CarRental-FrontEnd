@@ -1,0 +1,21 @@
+<a
+  mat-list-item
+  [ngStyle]="{ 'padding-left': depth * 12 + 'px' }"
+  (click)="onItemSelected(item)"
+  [ngClass]="{ active: router.isActive(item.routerLink, item.exact), expanded: expanded }"
+  [style.background-color]="item.background != undefined ? item.background : ''"
+  *ngIf="item.children != undefined && (item.children | requiresAuthorization).length == 0 ? false : true"
+>
+  <mat-icon class="routeIcon">{{ item.icon }}</mat-icon>
+  {{ item.text | translate }}
+  <span class="expander" *ngIf="item.children && (item.children | requiresAuthorization).length">
+    <mat-icon [@indicatorRotate]="expanded ? 'expanded' : 'collapsed'">
+      expand_more
+    </mat-icon>
+  </span>
+</a>
+
+<div *ngIf="expanded">
+  <app-nav-button *ngFor="let child of item.children | requiresAuthorization" [item]="child" [depth]="depth + 1">
+  </app-nav-button>
+</div>

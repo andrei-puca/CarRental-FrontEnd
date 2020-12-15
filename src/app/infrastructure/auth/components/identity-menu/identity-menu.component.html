@@ -1,0 +1,18 @@
+<div *ngIf="isAuthenticated">
+  <mat-menu #logoutMenu="matMenu" class="offset-lang-menu">
+    <button (click)="logout()" mat-menu-item>
+      <mat-icon>power_settings_new</mat-icon>{{ "idMenu.logout" | translate }}
+    </button>
+  </mat-menu>
+  <button mat-icon-button [matMenuTriggerFor]="logoutMenu">
+    <mat-icon>person</mat-icon>
+  </button>
+</div>
+<div *ngIf="!isAuthenticated">
+  <mat-menu #loginMenu="matMenu" class="offset-lang-menu">
+    <button (click)="login()" mat-menu-item><mat-icon>exit_to_app</mat-icon>{{ "idMenu.login" | translate }}</button>
+  </mat-menu>
+  <button mat-icon-button [matMenuTriggerFor]="loginMenu">
+    <mat-icon>person</mat-icon>
+  </button>
+</div>

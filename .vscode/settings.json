@@ -1,0 +1,5 @@
+{
+  "cSpell.words": ["APPROUTES", "Devtools", "Ngxs", "Toastr", "oidc", "sidenav"],
+  "typescript.tsdk": "node_modules/typescript/lib/",
+  "eslint.enable": true
+}

@@ -1,0 +1,91 @@
+<app-toolbar>
+  <span ngProjectAs="title">NGX Perfect Scrollbar</span>
+</app-toolbar>
+
+<div class="perfect-scrollbar-page">
+  <h3>{{ "perfectScrollbar.explanation" | translate }}</h3>
+  <i [innerHTML]="'perfectScrollbar.basicExample' | translate"></i>
+  <div class="perfect-scrollbar-container">
+    <perfect-scrollbar>
+      <p class="lorem-ipsum-spacing">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc condimentum vestibulum turpis, eu tempus erat
+        porttitor bibendum. Proin sed nisi vel dolor aliquet varius. Sed ultrices in mi id vulputate. Nam vel mattis
+        erat. Suspendisse interdum, libero at aliquam mollis, felis sapien ultrices diam, imperdiet finibus elit felis
+        rhoncus lacus. Donec ornare diam ipsum, sed gravida est tristique ut. Donec quis ultrices tellus. In enim felis,
+        suscipit at nulla sit amet, venenatis tincidunt velit. Nunc viverra ipsum id ornare aliquet. Fusce arcu sem,
+        bibendum non imperdiet a, scelerisque a ipsum. Phasellus venenatis eget turpis in viverra. Class aptent taciti
+        sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc eleifend augue non neque feugiat
+        rhoncus. Ut ullamcorper mattis nisi, at vestibulum magna facilisis sagittis. In ut leo in enim egestas cursus.
+        Donec metus dui, suscipit id nisl feugiat, dignissim pharetra metus. Donec a sodales sapien. Nullam justo eros,
+        efficitur vel ornare quis, aliquam eu urna. Aliquam orci arcu, sagittis ac velit at, luctus rutrum lacus. Mauris
+        efficitur dignissim pellentesque. Ut consequat nisl in nulla posuere, suscipit aliquam nisi viverra. Phasellus
+        vitae ultricies nisi. Praesent id purus volutpat ipsum pharetra finibus. Sed scelerisque egestas purus, eget
+        tincidunt neque consequat ac. Nunc a erat neque. Sed sit amet sapien ac erat efficitur ornare vitae ac odio.
+      </p>
+    </perfect-scrollbar>
+  </div>
+
+  <i [innerHTML]="'perfectScrollbar.advancedExample' | translate"></i>
+  <br />
+  <i [innerHTML]="'perfectScrollbar.advancedExampleDescription' | translate"></i>
+  <div class="perfect-scrollbar-container">
+    <div class="directive-container" [perfectScrollbar]>
+      <p class="lorem-ipsum-spacing">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc condimentum vestibulum turpis, eu tempus erat
+        porttitor bibendum. Proin sed nisi vel dolor aliquet varius. Sed ultrices in mi id vulputate. Nam vel mattis
+        erat. Suspendisse interdum, libero at aliquam mollis, felis sapien ultrices diam, imperdiet finibus elit felis
+        rhoncus lacus. Donec ornare diam ipsum, sed gravida est tristique ut. Donec quis ultrices tellus. In enim felis,
+        suscipit at nulla sit amet, venenatis tincidunt velit. Nunc viverra ipsum id ornare aliquet. Fusce arcu sem,
+        bibendum non imperdiet a, scelerisque a ipsum. Phasellus venenatis eget turpis in viverra. Class aptent taciti
+        sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc eleifend augue non neque feugiat
+        rhoncus. Ut ullamcorper mattis nisi, at vestibulum magna facilisis sagittis. In ut leo in enim egestas cursus.
+        Donec metus dui, suscipit id nisl feugiat, dignissim pharetra metus. Donec a sodales sapien. Nullam justo eros,
+        efficitur vel ornare quis, aliquam eu urna. Aliquam orci arcu, sagittis ac velit at, luctus rutrum lacus. Mauris
+        efficitur dignissim pellentesque. Ut consequat nisl in nulla posuere, suscipit aliquam nisi viverra. Phasellus
+        vitae ultricies nisi. Praesent id purus volutpat ipsum pharetra finibus. Sed scelerisque egestas purus, eget
+        tincidunt neque consequat ac. Nunc a erat neque. Sed sit amet sapien ac erat efficitur ornare vitae ac odio.
+      </p>
+    </div>
+  </div>
+
+  <i [innerHTML]="'perfectScrollbar.advancedExample' | translate"></i>
+  <br />
+  <i>{{ "perfectScrollbar.customExample" | translate }}</i>
+
+  <div class="scrollbar-with-buttons">
+    <div class="perfect-scrollbar-container">
+      <div class="directive-container" [perfectScrollbar] #perfectScroll="ngxPerfectScrollbar">
+        <p class="lorem-ipsum-spacing with-width">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc condimentum vestibulum turpis, eu tempus erat
+          porttitor bibendum. Proin sed nisi vel dolor aliquet varius. Sed ultrices in mi id vulputate. Nam vel mattis
+          erat. Suspendisse interdum, libero at aliquam mollis, felis sapien ultrices diam, imperdiet finibus elit felis
+          rhoncus lacus. Donec ornare diam ipsum, sed gravida est tristique ut. Donec quis ultrices tellus. In enim
+          felis, suscipit at nulla sit amet, venenatis tincidunt velit. Nunc viverra ipsum id ornare aliquet. Fusce arcu
+          sem, bibendum non imperdiet a, scelerisque a ipsum. Phasellus venenatis eget turpis in viverra. Class aptent
+          taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc eleifend augue non neque
+          feugiat rhoncus. Ut ullamcorper mattis nisi, at vestibulum magna facilisis sagittis. In ut leo in enim egestas
+          cursus. Donec metus dui, suscipit id nisl feugiat, dignissim pharetra metus. Donec a sodales sapien. Nullam
+          justo eros, efficitur vel ornare quis, aliquam eu urna. Aliquam orci arcu, sagittis ac velit at, luctus rutrum
+          lacus. Mauris efficitur dignissim pellentesque. Ut consequat nisl in nulla posuere, suscipit aliquam nisi
+          viverra. Phasellus vitae ultricies nisi. Praesent id purus volutpat ipsum pharetra finibus. Sed scelerisque
+          egestas purus, eget tincidunt neque consequat ac. Nunc a erat neque. Sed sit amet sapien ac erat efficitur
+          ornare vitae ac odio.
+        </p>
+      </div>
+    </div>
+    <div class="buttons-container">
+      <button mat-stroked-button color="primary" (click)="scrollToTop()">ScrollToTop</button>
+      <button mat-stroked-button color="primary" (click)="scrollToBottom()">ScrollToBottom</button>
+      <button mat-stroked-button color="primary" (click)="scrollToLeft()">scrollToLeft</button>
+      <button mat-stroked-button color="primary" (click)="scrollToRight()">scrollToRight</button>
+      <button mat-stroked-button color="primary" (click)="scrollToY(100)">scrollToY</button>
+      <button mat-stroked-button color="primary" (click)="scrollToX(100)">scrollToX</button>
+      <div class="hr"></div>
+      <div class="form-inputs">
+        <input type="text" placeholder="X position" [(ngModel)]="xPos" />
+        <input type="text" placeholder="Y position" [(ngModel)]="yPos" />
+      </div>
+      <button mat-stroked-button color="primary" (click)="scrollTo(xPos, yPos)">scrollTo</button>
+    </div>
+  </div>
+</div>

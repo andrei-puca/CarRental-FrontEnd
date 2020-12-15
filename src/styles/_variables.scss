@@ -1,0 +1,7 @@
+$app-primary: mat-palette($mat-deep-purple);
+$app-accent: mat-palette($mat-amber);
+
+$primary: mat-color($app-primary);
+$accent: mat-color($app-accent);
+
+$gray: #f0f0f0;

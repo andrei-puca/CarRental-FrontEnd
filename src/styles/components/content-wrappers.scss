@@ -1,0 +1,10 @@
+.content {
+  padding: 0px 20px;
+}
+
+// raised content card
+mat-card {
+  &.content {
+    margin: 20px;
+  }
+}

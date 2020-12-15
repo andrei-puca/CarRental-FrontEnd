@@ -1,0 +1,36 @@
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "~@angular/material/theming";
+@import "../../../../../styles/variables";
+
+:host {
+  background-color: $primary;
+  background-image: url(../../../../../assets/icon.png);
+}
+// Title
+.toast-title {
+  color: #ffffff;
+}
+// Main message body
+.toast-message {
+  color: #ffffff;
+}
+// Shows the time before toast disappears
+.toast-progress {
+  background-color: #ffffff;
+}
+
+.text-right {
+  position: relative;
+  top: -15px;
+  color: #f8da06;
+}
+
+.mat-button,
+.mat-flat-button,
+.mat-icon-button,
+.mat-stroked-button {
+  min-width: 74px;
+  border-radius: 0px;
+  height: calc(100% + 29px);
+  font-weight: 800;
+}

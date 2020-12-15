@@ -1,0 +1,33 @@
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "~@angular/material/theming";
+@import "./../../../../styles/variables";
+
+:host {
+  display: block;
+  outline: none;
+
+  .mat-list-item.active {
+    color: $primary;
+  }
+
+  &:hover,
+  &:focus {
+    // >.mat-list-item:not(.expanded) { // enable to not color the root route when child is selected
+    > .mat-list-item {
+      color: $primary;
+    }
+  }
+}
+
+.mat-list-item {
+  padding: 8px 0;
+
+  .routeIcon {
+    margin-right: 10px;
+  }
+}
+
+.expander {
+  position: absolute;
+  right: 20px;
+}

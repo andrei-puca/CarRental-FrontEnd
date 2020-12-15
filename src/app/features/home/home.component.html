@@ -1,0 +1,56 @@
+<app-toolbar>
+  <span ngProjectAs="title">{{ title }}</span>
+
+  <!-- everything not projected as a title will end up on the right -->
+  <button mat-icon-button name="homepage button" (click)="homePage()">
+    <mat-icon>home</mat-icon>
+  </button>
+</app-toolbar>
+
+<!-- content wrapper -->
+<div class="content">
+  <h1 class="mat-display-1">{{ "home.title" | translate }}</h1>
+  <p>{{ "auth.demo" | translate }}</p>
+
+  <h2 class="mat-h2">{{ "home.stateExample" | translate }}</h2>
+  <p>{{ "hotkey.cheatsheet" | translate }}</p>
+
+  <mat-divider></mat-divider>
+  <form (ngSubmit)="submitState(value)" autocomplete="off" name="state form">
+    <mat-form-field class="example-form-field single-line">
+      <input
+        matInput
+        type="text"
+        placeholder="{{ 'home.newStateValue' | translate }}"
+        [(ngModel)]="value"
+        name="localstateValue"
+      />
+      <button
+        mat-button
+        *ngIf="value"
+        matSuffix
+        mat-icon-button
+        aria-label="Clear"
+        (click)="value = ''"
+        name="close button"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <br />
+
+    <button mat-raised-button color="primary">
+      {{ "others.submit" | translate }}
+    </button>
+  </form>
+
+  <pre>this.localState = {{ { value: value } | json }} </pre>
+
+  <mat-divider></mat-divider>
+  <h2 class="mat-h2 margin-top">{{ "home.globalState" | translate }}</h2>
+  "valueInState": "{{ valueInState }}"
+
+  <mat-divider></mat-divider>
+  <h2 class="mat-h2 margin-top">Application settings</h2>
+  {{ getSettings() | json }}
+</div>

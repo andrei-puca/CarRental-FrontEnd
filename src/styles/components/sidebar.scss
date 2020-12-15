@@ -1,0 +1,25 @@
+mat-sidenav-container {
+  height: 100%;
+  max-height: 100%;
+}
+
+mat-sidenav {
+  min-width: 264px;
+
+  mat-toolbar {
+    max-width: 264px;
+    word-wrap: break-word;
+  }
+
+  mat-nav-list {
+    mat-list-item {
+      &.active {
+        color: $primary !important;
+      }
+
+      :hover {
+        color: $primary;
+      }
+    }
+  }
+}
