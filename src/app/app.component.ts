@@ -20,6 +20,7 @@ import { OIDCSettings } from "./infrastructure/appsettings/OIDCSettings";
 import { Router, NavigationCancel, NavigationEnd, NavigationError, NavigationStart } from "@angular/router";
 import { AuthService } from "./infrastructure/auth/auth.service";
 
+
 export const ROOT_SELECTOR = "app";
 
 /**

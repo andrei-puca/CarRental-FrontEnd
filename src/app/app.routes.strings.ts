@@ -1,4 +1,8 @@
 export const APPROUTES = {
+  rentallocations: "rentallocations",
+  pricelist: "pricelist",
+  reservationlist: "reservationlist",
+  reservation: "reservation",
   cars: "cars",
   client: "client",
   home: "",

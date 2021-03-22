@@ -41,9 +41,6 @@ public getAll() {
   resp.subscribe(report => this.dataSource.data= report as Cars[])
 }
 
- 
-
-
 }
 
 

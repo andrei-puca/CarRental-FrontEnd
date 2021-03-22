@@ -19,13 +19,5 @@ carList(){
   return this.http.get(this.rootURL+'/car/getallcars');
 }
 
-refreshList(){
-  const token = localStorage.getItem('userToken');
-  this.http.get(this.rootURL+'/car/getallcars')
-  .toPromise()
-  .then(res => this.list = res as Cars[]);
- 
-}
-
 
 }

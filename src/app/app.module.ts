@@ -46,6 +46,9 @@ import { MatSortModule } from "@angular/material/sort";
 import { MatTableModule } from "@angular/material/table";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatTooltipModule } from "@angular/material/tooltip";
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+
 
 import "../styles/styles.scss";
 
@@ -86,6 +89,11 @@ import { AuthGuardService } from "./infrastructure/oidc/auth-guard.service";
 import { AuthInterceptor } from "./infrastructure/oidc/auth.interceptor";
 import { ClientComponent } from './features/client/client.component';
 import { CarsComponent } from './features/cars/cars.component';
+import { ReservationComponent } from './features/reservation/reservation.component';
+import { LocationsComponent } from './features/locations/locations.component';
+import { PriceComponent } from './features/price/price.component';
+import { ReservationListComponent } from './features/reservationlist/reservationlist.component';
+import { RentalLocationsComponent } from './features/rentallocations/rentallocations.component';
 
 
 
@@ -136,6 +144,11 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     UnauthorizedComponent,
     ClientComponent,
     CarsComponent,
+    ReservationComponent,
+    LocationsComponent,
+    PriceComponent,
+    ReservationListComponent,
+    RentalLocationsComponent,
 
   ],
   /**
@@ -190,6 +203,12 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MatProgressBarModule,
     MatProgressSpinnerModule,
     MatPaginatorModule,
+    MatFormFieldModule,
+    MatSelectModule,  
+  ],
+  exports:[
+    MatFormFieldModule,
+    MatInputModule,
   ],
   /**
    * Expose our Services and Providers into Angulars dependency injection.

@@ -11,6 +11,10 @@ import { PERFECT_SCROLLBAR_ROUTES } from "./features/perfect-scrollbar/perfectsc
 import { UnauthorizedComponent } from "./infrastructure/oidc/unauthorized/unauthorized.component";
 import { CLIENT_ROUTES } from './features/client/client.routes';
 import { CARS_ROUTES } from './features/cars/cars.routes';
+import { RESERVATION_ROUTES } from './features/reservation/reservation.routes';
+import { RESERVATIONLIST_ROUTER} from './features/reservationlist/reservationlist.routes';
+import { PRICELIST_ROUTER} from  './features/price/price.routes';
+import { RENTALLOCATIONS_ROUTES } from './features/rentallocations/rentallocations.routes';
 
 export const ROUTES: Routes = [
   { path: APPROUTES.home, component: HomeComponent },
@@ -24,6 +28,10 @@ export const ROUTES: Routes = [
   ...TOASTERS_ROUTES,
   ...INPUTS_ROUTES,
   ...PERFECT_SCROLLBAR_ROUTES,
+  ...RESERVATION_ROUTES,
+  ...RESERVATIONLIST_ROUTER,
+  ...PRICELIST_ROUTER,
+  ...RENTALLOCATIONS_ROUTES,
 
   // unauthorized
   { path: APPROUTES.unauthorized, component: UnauthorizedComponent },

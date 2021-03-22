@@ -9,7 +9,12 @@
     "perfectscrollbar": "Perfect Scrollbar",
     "hiddenByChildren": "hidden by children",
     "client": "Clients",
-    "cars": "Car List"
+    "cars": "Car List",
+    "reservation": "New Reservation",
+    "reservationlist": "Reservations List",
+    "pricelist": "Prices List",
+    "rentallocations": "Rental Locations"
+    
   },
   "home": {
     "title": "Homepage",
@@ -19,6 +24,11 @@
     "globalState": "Global app state",
     "newStateValue": "New state value"
   },
+
+  "reservation": {
+    "createsuccessful": "You car was just reserved"
+  },
+
   "heroes": {
     "title": "Heroes",
     "subtitle": "All our heroes in a nifty little table",
