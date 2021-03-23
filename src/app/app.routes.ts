@@ -15,6 +15,8 @@ import { RESERVATION_ROUTES } from './features/reservation/reservation.routes';
 import { RESERVATIONLIST_ROUTER} from './features/reservationlist/reservationlist.routes';
 import { PRICELIST_ROUTER} from  './features/price/price.routes';
 import { RENTALLOCATIONS_ROUTES } from './features/rentallocations/rentallocations.routes';
+import { CARSMAINTENANCE_ROUTES } from './features/cars/cars-maintenance/cars-maintenance.routes';
+
 
 export const ROUTES: Routes = [
   { path: APPROUTES.home, component: HomeComponent },
@@ -32,6 +34,7 @@ export const ROUTES: Routes = [
   ...RESERVATIONLIST_ROUTER,
   ...PRICELIST_ROUTER,
   ...RENTALLOCATIONS_ROUTES,
+  ...CARSMAINTENANCE_ROUTES,
 
   // unauthorized
   { path: APPROUTES.unauthorized, component: UnauthorizedComponent },

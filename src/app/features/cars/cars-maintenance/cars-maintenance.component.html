@@ -1,0 +1,45 @@
+<app-toolbar>
+    <span ngProjectAs="title">Car list</span>
+</app-toolbar>
+
+
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+
+        <ng-container matColumnDef="brand">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Brand </th>
+            <td mat-cell *matCellDef="let element"> {{element.brand}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="model">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Model </th>
+            <td mat-cell *matCellDef="let element"> {{element.model}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="mileageUntilService">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Mileage until service</th>
+            <td mat-cell *matCellDef="let element" [ngClass]="{
+            'positive' : element.mileageUntilService > 5000,
+            'negative' : element.mileageUntilService < 5000
+         }"> {{element.mileageUntilService}} km </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="monthsUntilService">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Months until service</th>
+            <td mat-cell *matCellDef="let element" [ngClass]="{
+            'positive' : element.monthsUntilService > 1,
+            'negative' : element.monthsUntilService <= 1
+         }"> {{element.monthsUntilService}} months </td>
+        </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[10, 50, 100]" showFirstLastButtons></mat-paginator>
+</div>

@@ -1,9 +1,11 @@
 export const APPROUTES = {
+  carm: "carsmaintenance",
   rentallocations: "rentallocations",
   pricelist: "pricelist",
   reservationlist: "reservationlist",
   reservation: "reservation",
   cars: "cars",
+  carslist: "carlist",
   client: "client",
   home: "",
   heroes: "heroes",

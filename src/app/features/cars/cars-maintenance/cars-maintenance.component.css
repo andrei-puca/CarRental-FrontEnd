@@ -1,0 +1,17 @@
+table {
+    width: 100%;
+}
+
+th.mat-sort-header-sorted {
+    color: black;
+}
+
+.negative {
+    color: red;
+    font-weight: bold;
+}
+
+.positive {
+    color: green;
+    font-weight: bold;
+}
