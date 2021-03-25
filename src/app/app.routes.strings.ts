@@ -1,5 +1,7 @@
 export const APPROUTES = {
-  carm: "carsmaintenance",
+  cardetails: "cardetails",
+  receivecar: "receivecar",
+  carsmaintenance: "carsmaintenance",
   rentallocations: "rentallocations",
   pricelist: "pricelist",
   reservationlist: "reservationlist",

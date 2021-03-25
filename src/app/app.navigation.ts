@@ -18,7 +18,7 @@ export const NavItems: NavItem[] = [
     requiresAuthorization: false,
     children: [
       {
-        icon: "contacts",
+        icon: "featured_play_list_rounded ",
         requiresAuthorization: false,
         text: "nav.carslist",
         routerLink: APPROUTES.cars,
@@ -26,10 +26,17 @@ export const NavItems: NavItem[] = [
         backgroundColor: "pink",
       },
       {
-        icon: "perm_scan_wifi",
+        icon: "apartment",
         requiresAuthorization: false,
         text: "nav.carsmaintenance",
-        routerLink: APPROUTES.carm,
+        routerLink: APPROUTES.carsmaintenance,
+        exact: false,
+      },
+      {
+        icon: "arrow_circle_down_outlined",
+        requiresAuthorization: false,
+        text: "nav.receivecar",
+        routerLink: APPROUTES.receivecar,
         exact: false,
       },
     ],

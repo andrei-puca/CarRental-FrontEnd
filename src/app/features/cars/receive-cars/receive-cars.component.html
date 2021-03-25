@@ -1,1 +1,22 @@
-<p>receive-cars works!</p>
+<app-toolbar>
+    <span ngProjectAs="title">Receive car</span>
+</app-toolbar>
+
+<div class="container">
+    <form #form="ngForm" autocomplete="off" (ngSubmit)="onSubmit(form)">
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Choose car</mat-label>
+            <mat-select name="id" #model="ngModel" [(ngModel)]="service.formData.id" required>
+                <mat-option *ngFor="let car of cars" [value]="car.id">{{car.brand}} {{car.model}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Mileage</mat-label>
+            <input [(ngModel)]="service.formData.mileage" name="mileage" matInput placeholder="Current milleage">
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="primary" type="submit">Receive car</button>
+    </form>
+</div>

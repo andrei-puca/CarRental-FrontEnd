@@ -96,6 +96,7 @@ import { ReservationListComponent } from './features/reservationlist/reservation
 import { RentalLocationsComponent } from './features/rentallocations/rentallocations.component';
 import { ReceiveCarsComponent } from './features/cars/receive-cars/receive-cars.component';
 import { CarsMaintenanceComponent } from './features/cars/cars-maintenance/cars-maintenance.component';
+import { CarDetailsComponent } from './features/cars/car-details/car-details.component';
 
 
 
@@ -153,6 +154,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     RentalLocationsComponent,
     ReceiveCarsComponent,
     CarsMaintenanceComponent,
+    CarDetailsComponent,
 
   ],
   /**

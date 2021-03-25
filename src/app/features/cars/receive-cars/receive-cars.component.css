@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-flex {
+    height: 1px !important
+}
+
+::ng-deep .mat-form-field-infix {
+    padding-top: 10px !important;
+    width: 300px !important;
+}
+
+.form.button {
+    padding-left: 100px;
+    padding-right: 100px;
+}
