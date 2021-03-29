@@ -1,0 +1,37 @@
+<div class="container">
+    <form #form="ngForm">
+        <button class="close" mat-button (click)="onNoClick()">X</button>
+        <div mat-dialog-content>
+            <input hidden="true" name="carId" matInput [(ngModel)]="data.carId">
+            <mat-form-field>
+                <input name="brand" matInput [(ngModel)]="data.brand" placeholder="Brand" disabled>
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input name="model" matInput [(ngModel)]="data.model" placeholder="Model" disabled>
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input name="lastServiceDate" matInput [matDatepicker]="picker" [(ngModel)]="data.lastServiceDate" placeholder="Enter the service date" required>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input name="lastServiceMileage" type="number" matInput [(ngModel)]="data.lastServiceMileage" placeholder="Current mileage" required>
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input name="serviceIntervalKm" type="number" matInput [(ngModel)]="data.serviceIntervalKm" placeholder="Next service in km" required>
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input name="serviceIntervalDate" type="number" matInput [(ngModel)]="data.serviceIntervalDate" placeholder="Next service in months" required>
+            </mat-form-field>
+            <br>
+        </div>
+        <div mat-dialog-actions>
+            <button mat-raised-button (click)="doThat(form)" [disabled]="!form.valid">Register new service</button>
+        </div>
+    </form>
+</div>

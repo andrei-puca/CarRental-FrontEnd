@@ -31,7 +31,7 @@ import { HomeComponent } from "./features/home";
 // Angular material
 import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from "@angular/material/card";
-import { MatNativeDateModule } from "@angular/material/core";
+import { MatNativeDateModule, MAT_DATE_LOCALE } from "@angular/material/core";
 import { MatDatepickerModule } from "@angular/material/datepicker";
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatIconModule } from "@angular/material/icon";
@@ -97,6 +97,7 @@ import { RentalLocationsComponent } from './features/rentallocations/rentallocat
 import { ReceiveCarsComponent } from './features/cars/receive-cars/receive-cars.component';
 import { CarsMaintenanceComponent } from './features/cars/cars-maintenance/cars-maintenance.component';
 import { CarDetailsComponent } from './features/cars/car-details/car-details.component';
+import { CarsMaintenanceModalComponent } from './features/cars/cars-maintenance/cars-maintenance-modal/cars-maintenance-modal.component';
 
 
 
@@ -155,6 +156,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     ReceiveCarsComponent,
     CarsMaintenanceComponent,
     CarDetailsComponent,
+    CarsMaintenanceModalComponent,
 
   ],
   /**
@@ -228,6 +230,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
       deps: [AppSettings],
       multi: true,
     },
+    {provide: MAT_DATE_LOCALE, useValue: 'en-GB'},
     // OidcSecurityService,
     // OidcConfigService,
     // {
@@ -252,7 +255,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     DefaultToastComponent,
     ActionToastExampleComponent,
     ActionToastButtonComponent,
-    EditHelpDialogComponent,
+    EditHelpDialogComponent,  
+    CarsMaintenanceModalComponent,
   ],
 })
 export class AppModule {}

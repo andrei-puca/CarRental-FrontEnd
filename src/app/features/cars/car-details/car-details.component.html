@@ -2,40 +2,20 @@
     <span ngProjectAs="title">Car Details</span>
 </app-toolbar>
 <form (ngSubmit)="onSubmit()">
-
-
-    <!-- <p>
-        🧙‍♂️ {{selectedUserId}} ☕
-    </p>
-
-    <tr *ngFor="let car of cars">
-        <td>{{car.lastServiceDate}}</td>
-
-    </tr> -->
-
-
     <mat-card class="example-card" *ngFor="let car of cars">
         <mat-card-header>
             <img mat-card-avatar src="assets/icon/cars/{{car.brand}}.png" class="example-header-image">
             <mat-card-title>{{car.brand}}</mat-card-title>
             <mat-card-subtitle>{{car.model}}</mat-card-subtitle>
         </mat-card-header>
-        <img mat-card-image src="assets/img/{{car.brand}}_{{car.model}}.png" alt="Photo of a Shiba Inu">
+        <img mat-card-image src="assets/img/{{car.brand}}_{{car.model}}.png" alt="Car photo">
         <mat-card-content>
             <p>
-                <center>Last service date: {{car.lastServiceDate}}</center>
+                <center>Last service date: {{car.lastServiceDate | date:'yyyy-MM-dd'}}</center>
             </p>
         </mat-card-content>
         <mat-card-actions>
             <center><button type="submit" mat-raised-button>BACK TO CAR LIST</button></center>
         </mat-card-actions>
     </mat-card>
-
-    <!-- <button type="submit">👈 back</button> -->
 </form>
-
-
-<!-- 
-<li *ngFor="let car of cars">
-    <p>{{car.model}} {{car.brand}} {{car.lastservicedate}} </p>
-</li> -->

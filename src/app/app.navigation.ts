@@ -26,14 +26,14 @@ export const NavItems: NavItem[] = [
         backgroundColor: "pink",
       },
       {
-        icon: "apartment",
+        icon: "build",
         requiresAuthorization: false,
         text: "nav.carsmaintenance",
         routerLink: APPROUTES.carsmaintenance,
         exact: false,
       },
       {
-        icon: "arrow_circle_down_outlined",
+        icon: "assignment_returned",
         requiresAuthorization: false,
         text: "nav.receivecar",
         routerLink: APPROUTES.receivecar,

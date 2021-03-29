@@ -4,6 +4,8 @@ import {MatTableDataSource} from '@angular/material/table';
 import { Cars } from './cars.model';
 import { CarsService } from './cars.service';
 import {MatSort} from '@angular/material/sort';
+import { Router } from '@angular/router';
+
 /**
  * @title Table with pagination
  */
@@ -19,7 +21,7 @@ export class CarsComponent implements OnInit, AfterViewInit  {
   displayedColumns: string[] = ['brand', 'model', 'mileage'];
   dataSource = new MatTableDataSource<Cars>(this.ELEMENT_DATA);
 
-  constructor(private service: CarsService) { }
+  constructor(private service: CarsService, private _router: Router) { }
 
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -39,6 +41,13 @@ export class CarsComponent implements OnInit, AfterViewInit  {
 public getAll() {
   let resp = this.service.carList();
   resp.subscribe(report => this.dataSource.data= report as Cars[])
+}
+
+clickHandler(row) {
+  console.log(row)
+        //  this._router.navigate(['cardetails',row.brand]); // id in your app
+        this._router.navigate(['cardetails'], { state: { id: row.id } });
+
 }
 
 }
