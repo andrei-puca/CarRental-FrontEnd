@@ -1,51 +1,57 @@
 <app-toolbar>
-  <span ngProjectAs="title">Reservation menu</span>
+    <span ngProjectAs="title">Reservation menu</span>
 </app-toolbar>
 
 <div class="container">
-     <form #form="ngForm" autocomplete="off" (ngSubmit)="onSubmit(form)">
-  <mat-form-field appearance="fill">
-    <mat-label>Choose client</mat-label>
-    <mat-select name="ClientId" #ClientId="ngModel" [(ngModel)]="service.formData.ClientId" required>
-      <mat-option *ngFor ="let client of clients" [value]="client.id" >{{client.fullName}}</mat-option>
-    </mat-select>
-  </mat-form-field>
-  <br>
-  <mat-form-field appearance="fill">
-    <mat-label>Choose car</mat-label>
-    <mat-select name="carid" #model="ngModel" [(ngModel)]="service.formData.carid" required>
-      <mat-option *ngFor ="let car of cars" [value]="car.id" >{{car.brand}} {{car.model}}</mat-option>
-    </mat-select>
-  </mat-form-field>
-  <br>
-  <mat-form-field appearance="fill">
-    <mat-label>Start date</mat-label>
-    <input name="rentalstartdate" matInput [matDatepicker]="picker" #startdate="ngModel" [(ngModel)]="service.formData.rentalstartdate" required>
-    <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
-  </mat-form-field>
-  <br>
-  <mat-form-field appearance="fill">
-    <mat-label>End date</mat-label>
-    <input name = "rentalenddate" matInput [matDatepicker]="picker1" #enddate="ngModel" [(ngModel)]="service.formData.rentalenddate" required>
-    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-    <mat-datepicker #picker1></mat-datepicker>
-  </mat-form-field>
-  <br>
-  <mat-form-field appearance="fill">
-    <mat-label>Pick up location</mat-label>
-    <mat-select name="pickuplocation" #pickuplocation="ngModel" [(ngModel)]="service.formData.pickuplocation" required>
-      <mat-option  *ngFor ="let location of locations" [value]="location.id" >{{location.name}} - {{location.city}}</mat-option>
-    </mat-select>
-  </mat-form-field>
-  <br>
-  <mat-form-field appearance="fill">
-    <mat-label>Drop off location</mat-label>
-    <mat-select name="dropofflocation"  #dropofflocation="ngModel" [(ngModel)]="service.formData.dropofflocation" required>
-      <mat-option *ngFor ="let location of locations" [value]="location.id" >{{location.name}} - {{location.city}}</mat-option>
-    </mat-select>
-  </mat-form-field>
-  <br>
-  <button mat-raised-button color="primary" type="submit">Book a car</button>
-</form>
-</div> 
+    <form #form="ngForm" autocomplete="off" (ngSubmit)="onSubmit(form)">
+        <mat-form-field appearance="fill">
+            <mat-label>Choose client</mat-label>
+            <mat-select name="ClientId" #ClientId="ngModel" [(ngModel)]="service.formData.ClientId" required>
+                <mat-option *ngFor="let client of clients" [value]="client.id">{{client.fullName}}</mat-option>
+                <div class="alert alert-danger" *ngIf="service.formData.ClientId.touched && !service.formData.ClientId.valid">Client is required</div>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Choose car</mat-label>
+            <mat-select name="carid" #model="ngModel" [(ngModel)]="service.formData.carid" required>
+                <mat-option *ngFor="let car of cars" [value]="car.id">{{car.brand}} {{car.model}}</mat-option>
+                <div class="alert alert-danger" *ngIf="service.formData.carid.touched && !service.formData.carid.valid">Car is required</div>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Start date</mat-label>
+            <input name="rentalstartdate" matInput [matDatepicker]="picker" #startdate="ngModel" [(ngModel)]="service.formData.rentalstartdate" required>
+            <div class="alert alert-danger" *ngIf="service.formData.rentalstartdate.touched && !service.formData.rentalstartdate.valid">Start date is required</div>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>End date</mat-label>
+            <input name="rentalenddate" matInput [matDatepicker]="picker1" #enddate="ngModel" [(ngModel)]="service.formData.rentalenddate" required>
+            <div class="alert alert-danger" *ngIf="service.formData.rentalenddate.touched && !service.formData.rentalenddate.valid">End date is required</div>
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Pick up location</mat-label>
+            <mat-select name="pickuplocation" #pickuplocation="ngModel" [(ngModel)]="service.formData.pickuplocation" required>
+                <mat-option *ngFor="let location of locations" [value]="location.id">{{location.name}} - {{location.city}}</mat-option>
+                <div class="alert alert-danger" *ngIf="service.formData.pickuplocation.touched && !service.formData.pickuplocation.valid">Pick up location is required</div>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Drop off location</mat-label>
+            <mat-select name="dropofflocation" #dropofflocation="ngModel" [(ngModel)]="service.formData.dropofflocation" required>
+                <mat-option *ngFor="let location of locations" [value]="location.id">{{location.name}} - {{location.city}}</mat-option>
+                <div class="alert alert-danger" *ngIf="service.formData.dropofflocation.touched && !service.formData.dropofflocation.valid">Drop off is required</div>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">Book a car</button>
+    </form>
+</div>

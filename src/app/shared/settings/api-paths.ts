@@ -1,0 +1,15 @@
+export enum ApiPaths {
+  AllCars = '/car/getAllCars',
+  AllClients = '/clients/getAllClients',
+  AllPrices = '/price/getAllPrices',
+  AllPricesDetailed = '/price/getDetailedPrices',
+  AllRentalLocations = '/rentalLocations/getAllRentalLocations',
+  AvailableCars = '/car/availableCars',
+  CarsWithServiceOverdue = '/carMaintenance',
+  CreateReservation = '/reservation/createReservation',
+  CreateServiceRecord = '/carMaintenance/serviceRecord',
+  LastServiceDate = '/carMaintenance/lastServiceDate',
+  MarkCarAsAvailable = '/car/markCarAsAvailable',
+  RentedCars = '/car/rentedCars',
+  ReservationsList = '/reservation/getReservationsDetailed',
+}

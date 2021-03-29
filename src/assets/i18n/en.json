@@ -1,109 +1,114 @@
 {
-  "nav": {
-    "home": "Home",
-    "heroes": "Heroes",
-    "about": "About",
-    "aboutUs": "About us (with bg)",
-    "version": "Version",
-    "contextmenus": "Contextmenus",
-    "perfectscrollbar": "Perfect Scrollbar",
-    "hiddenByChildren": "hidden by children",
-    "client": "Clients",
-    "cars": "Cars",
-    "carslist": "Car list",
-    "reservation": "New Reservation",
-    "reservationlist": "Reservations List",
-    "pricelist": "Prices List",
-    "rentallocations": "Rental Locations"
-    
-  },
-  "home": {
-    "title": "Homepage",
-    "helloWorld": "Hi from the homepage!",
-    "homeToolbar": "You've clicked the home toolbar button.",
-    "stateExample": "State engine example",
-    "globalState": "Global app state",
-    "newStateValue": "New state value"
-  },
+    "nav": {
+        "home": "Home",
+        "heroes": "Heroes",
+        "about": "About",
+        "aboutUs": "About us (with bg)",
+        "version": "Version",
+        "contextmenus": "Contextmenus",
+        "perfectscrollbar": "Perfect Scrollbar",
+        "hiddenByChildren": "hidden by children",
+        "client": "Clients",
+        "cars": "Cars",
+        "carslist": "Car list",
+        "reservation": "New Reservation",
+        "reservationlist": "Reservations List",
+        "pricelist": "Prices List",
+        "rentallocations": "Rental Locations",
+        "carsmaintenance": "Car Maintenance",
+        "receivecar": "Receive Car"
 
-  "reservation": {
-    "createsuccessful": "You car was just reserved"
-  },
+    },
+    "home": {
+        "title": "Homepage",
+        "helloWorld": "Hi from the homepage!",
+        "homeToolbar": "You've clicked the home toolbar button.",
+        "stateExample": "State engine example",
+        "globalState": "Global app state",
+        "newStateValue": "New state value"
+    },
 
-  "heroes": {
-    "title": "Heroes",
-    "subtitle": "All our heroes in a nifty little table",
-    "tip": "psst: try hitting <code>alt+shift+s</code> on your keyboard",
-    "includeSkills": "Include Skills",
-    "id": "Id",
-    "name": "Name",
-    "skill": "Skills",
-    "details": "details",
-    "shazam": "Shazam! You pressed a hotkey!",
-    "fetched": "Heroes fetched!",
-    "sayHi": "Say hi!",
-    "helloUser": "Hello user!",
-    "hotkeySave": "alt+s to save"
-  },
-  "toasters": {
-    "defaultBtn": "Default",
-    "optionsBtn": "Options",
-    "1clickBtn": "1click",
-    "actionsBtn": "Actions",
-    "standardToasts": "Standard toasts",
-    "customToasts": "Custom toasts",
-    "defaultTitle": "A default toast",
-    "defaultMessage": "This is the default toast",
-    "actionTitle": "Action toast",
-    "actionMessage": "This is the default toast with actions",
-    "buttonTitle": "Button toast",
-    "buttonMessage": "This is the default toast with 1 click button",
-    "optionsTitle": "Options toast",
-    "optionsMessage": "This is the default toast with different options",
-    "helloWorld": "Hello world!",
-    "mailSent": "Your mail has been sent!",
-    "cancelMailing": "You canceled your mailing",
-    "click": "Go"
-  },
-  "perfectScrollbar": {
-    "explanation": "All elements with a dashed border on this page are scrollable",
-    "basicExample": "Below is a basic example of a scrollable container by using the <b>element</b> directive of Perfect Scrollbar",
-    "advancedExample": "Below is a more advanced example of a scrollable container by using the <b>attribute</b> directive of NGX Perfect Scrollbar",
-    "advancedExampleDescription": "In order to achieve a scroll you will need to set a parent container with a specific height.<br />Also the height needs to be 100% on the element with the directive and have position of relative.",
-    "customExample": "We're using a few functions which give us control over things like the `scrollToX` and `scrollToY` properties."
-  },
-  "others": {
-    "submit": "Submit",
-    "back": "Back",
-    "helpBtn": "You've requested help.",
-    "cancel": "Cancel",
-    "noFunc": "No function was passed along",
-    "noToast": "No toast was passed along",
-    "noLink": "No Hyperlink was passed along"
-  },
-  "help": {
-    "edit": "Edit",
-    "save": "Save",
-    "cancel": "Cancel",
-    "linkChanged": "Succesfully changed link"
-  },
-  "idMenu": {
-    "login": "login",
-    "logout": "logout",
-    "loggedIn": "User logged in"
-  },
-  "hotkey": {
-    "cheatsheet": "Press shift + '/?' in order to show the shortcut cheatsheet"
-  },
-  "inputs": {
-    "title": "Inputs",
-    "timepicker": "Time picker",
-    "datepicker": "Date picker",
-    "chooseADate": "Choose a date"
-  },
-  "auth": {
-    "demo": "Log in by using the top right account button to reveal the heroes item in the navigation menu",
-    "unauthorizedError": "Unauthorized",
-    "unauthorizedMessage": "You are not authorized to access this page. <br /> If you're not logged in, please log in by clicking on the <mat-icon>person</mat-icon> icon in the toolbar (top right)."
-  }
+    "reservation": {
+        "createsuccessful": "You car was just reserved"
+    },
+    "carservice": {
+        "createsuccessful": "New service entry added for the car"
+    },
+
+    "heroes": {
+        "title": "Heroes",
+        "subtitle": "All our heroes in a nifty little table",
+        "tip": "psst: try hitting <code>alt+shift+s</code> on your keyboard",
+        "includeSkills": "Include Skills",
+        "id": "Id",
+        "name": "Name",
+        "skill": "Skills",
+        "details": "details",
+        "shazam": "Shazam! You pressed a hotkey!",
+        "fetched": "Heroes fetched!",
+        "sayHi": "Say hi!",
+        "helloUser": "Hello user!",
+        "hotkeySave": "alt+s to save"
+    },
+    "toasters": {
+        "defaultBtn": "Default",
+        "optionsBtn": "Options",
+        "1clickBtn": "1click",
+        "actionsBtn": "Actions",
+        "standardToasts": "Standard toasts",
+        "customToasts": "Custom toasts",
+        "defaultTitle": "A default toast",
+        "defaultMessage": "This is the default toast",
+        "actionTitle": "Action toast",
+        "actionMessage": "This is the default toast with actions",
+        "buttonTitle": "Button toast",
+        "buttonMessage": "This is the default toast with 1 click button",
+        "optionsTitle": "Options toast",
+        "optionsMessage": "This is the default toast with different options",
+        "helloWorld": "Hello world!",
+        "mailSent": "Your mail has been sent!",
+        "cancelMailing": "You canceled your mailing",
+        "click": "Go"
+    },
+    "perfectScrollbar": {
+        "explanation": "All elements with a dashed border on this page are scrollable",
+        "basicExample": "Below is a basic example of a scrollable container by using the <b>element</b> directive of Perfect Scrollbar",
+        "advancedExample": "Below is a more advanced example of a scrollable container by using the <b>attribute</b> directive of NGX Perfect Scrollbar",
+        "advancedExampleDescription": "In order to achieve a scroll you will need to set a parent container with a specific height.<br />Also the height needs to be 100% on the element with the directive and have position of relative.",
+        "customExample": "We're using a few functions which give us control over things like the `scrollToX` and `scrollToY` properties."
+    },
+    "others": {
+        "submit": "Submit",
+        "back": "Back",
+        "helpBtn": "You've requested help.",
+        "cancel": "Cancel",
+        "noFunc": "No function was passed along",
+        "noToast": "No toast was passed along",
+        "noLink": "No Hyperlink was passed along"
+    },
+    "help": {
+        "edit": "Edit",
+        "save": "Save",
+        "cancel": "Cancel",
+        "linkChanged": "Succesfully changed link"
+    },
+    "idMenu": {
+        "login": "login",
+        "logout": "logout",
+        "loggedIn": "User logged in"
+    },
+    "hotkey": {
+        "cheatsheet": "Press shift + '/?' in order to show the shortcut cheatsheet"
+    },
+    "inputs": {
+        "title": "Inputs",
+        "timepicker": "Time picker",
+        "datepicker": "Date picker",
+        "chooseADate": "Choose a date"
+    },
+    "auth": {
+        "demo": "Log in by using the top right account button to reveal the heroes item in the navigation menu",
+        "unauthorizedError": "Unauthorized",
+        "unauthorizedMessage": "You are not authorized to access this page. <br /> If you're not logged in, please log in by clicking on the <mat-icon>person</mat-icon> icon in the toolbar (top right)."
+    }
 }

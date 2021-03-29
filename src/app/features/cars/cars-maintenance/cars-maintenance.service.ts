@@ -1,35 +1,25 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { CarsMaintenance } from './cars-maintenance.model';
+import { ApiPaths } from 'app/shared/settings/api-paths';
+import { environment } from 'environments/environment';
 
 @Injectable({
     providedIn: 'root'
 })
 export class CarsMaintenanceService {
     formData: CarsMaintenance [];
-    readonly rootURL = 'http://localhost:5001'
     list: CarsMaintenance[];
-    data;
-    private _items:CarsMaintenance[] = [];
-
-
-    constructor(private http: HttpClient) { }
-
-
+    readonly baseUrl = environment.baseUrl;
     
- 
-    addItem(item: CarsMaintenance) {
-        this._items.push(item);
-    }
+    constructor(private http: HttpClient) { }
     
     carList() {
-
-        return this.http.get(this.rootURL + '/carMaintenance');
+        return this.http.get(this.baseUrl + ApiPaths.CarsWithServiceOverdue);
     }
 
     CreateServiceRecord(formData) {
-        console.log("here3",formData);
-        return this.http.put(this.rootURL + '/carmaintenance/servicerecord', formData)
+        return this.http.put(this.baseUrl + ApiPaths.CreateServiceRecord, formData)
       }
 
 }

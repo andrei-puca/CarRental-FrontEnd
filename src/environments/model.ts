@@ -5,4 +5,5 @@ export interface Environment {
   ENV_PROVIDERS: any;
   showDevModule: boolean;
   decorateModuleRef(modRef: NgModuleRef<any>): NgModuleRef<any>;
+  baseUrl: string;
 }

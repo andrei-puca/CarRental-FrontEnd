@@ -40,7 +40,8 @@ export class ReservationListComponent implements OnInit, AfterViewInit  {
 public getAll() {
   let resp = this.service.reservationList();
   resp.subscribe(report => this.dataSource.data= report as ReservationList[])
-  console.log(this.dataSource.data);
+
+  console.log(this.dataSource);
 }
 
 }

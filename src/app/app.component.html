@@ -1,22 +1,22 @@
 <mat-sidenav-container class="app-container">
-  <mat-sidenav #sidenav class="example-sidenav">
-    <app-sidenav></app-sidenav>
-  </mat-sidenav>
+    <mat-sidenav #sidenav class="example-sidenav">
+        <app-sidenav></app-sidenav>
+    </mat-sidenav>
 
-  <div *ngIf="loading">
-    <div class="example-sidenav-content">
-      <main>
-        <app-toolbar></app-toolbar>
-        <mat-progress-bar *ngIf="loading" color="accent" mode="indeterminate"> </mat-progress-bar>
-        <b>Loading...</b>
-      </main>
+    <div *ngIf="loading">
+        <div class="example-sidenav-content">
+            <main>
+                <app-toolbar></app-toolbar>
+                <mat-progress-bar *ngIf="loading" color="accent" mode="indeterminate"> </mat-progress-bar>
+                <b>Loading...</b>
+            </main>
+        </div>
     </div>
-  </div>
 
-  <div class="example-sidenav-content">
-    <main>
-      <router-outlet></router-outlet>
-    </main>
-  </div>
+    <div class="example-sidenav-content">
+        <main>
+            <router-outlet></router-outlet>
+        </main>
+    </div>
 </mat-sidenav-container>
 <hotkeys-cheatsheet></hotkeys-cheatsheet>

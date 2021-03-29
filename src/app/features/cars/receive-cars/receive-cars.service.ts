@@ -1,30 +1,30 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { Cars } from '../cars/cars.model';
-import { Observable } from 'rxjs/internal/Observable';
-import { ReceiveCars } from './receive-cars.model';
+import { Injectable } from '@angular/core'
+import { HttpClient, HttpHeaders } from '@angular/common/http'
+import { Cars } from '../cars/cars.model'
+import { Observable } from 'rxjs/internal/Observable'
+import { ReceiveCars } from './receive-cars.model'
+import { ApiPaths } from 'app/shared/settings/api-paths'
+import { environment } from 'environments/environment'
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ReceiveCarsService {
+  formData: ReceiveCars
+  readonly baseUrl = environment.baseUrl
 
-  formData: ReceiveCars;
-  carFormData: ReceiveCars;
-  readonly rootURL = 'http://localhost:5001'
-  list: ReceiveCars[];
-  carList: ReceiveCars[];
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getRentedCars() {
-    return this.http.get(this.rootURL + '/car/rentedcars');
+    return this.http.get(this.baseUrl + ApiPaths.RentedCars)
   }
 
-  
   markCarAsAvailable() {
-    this.formData.mileage = this.formData.mileage*1;
-    return this.http.put(this.rootURL + '/Car/MarkCarAsAvailable', this.formData);
+    this.formData.mileage = this.formData.mileage * 1
+    return this.http.put(
+      this.baseUrl + ApiPaths.MarkCarAsAvailable,
+      this.formData,
+    )
   }
 
   // refreshList(){
@@ -34,7 +34,4 @@ export class ReceiveCarsService {
   //   .then(res => this.list = res as Cars[]);
 
   // }
-
-
-
 }

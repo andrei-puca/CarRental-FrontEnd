@@ -1,19 +1,20 @@
-import { Injectable } from '@angular/core';
-import { RentalLocations } from '../rentallocations/rentallocations.model';
-import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { Injectable } from '@angular/core'
+import { RentalLocations } from '../rentallocations/rentallocations.model'
+import { HttpClient, HttpHeaders } from '@angular/common/http'
+import { environment } from 'environments/environment'
+import { ApiPaths } from 'app/shared/settings/api-paths'
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root',
 })
 export class RentalLocationsService {
-    
-    formData: RentalLocations;
-    readonly rootURL = 'http://localhost:5001'
-    list: RentalLocations[];
+  formData: RentalLocations
+  readonly baseUrl = environment.baseUrl
+  list: RentalLocations[]
 
-    constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-    clientList() {
-        return this.http.get(this.rootURL + '/RentalLocations/GetAllRentalLocations');
-    }
+  clientList() {
+    return this.http.get(this.baseUrl + ApiPaths.AllRentalLocations)
+  }
 }

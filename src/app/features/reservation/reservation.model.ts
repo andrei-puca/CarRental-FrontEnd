@@ -4,8 +4,8 @@ export class Reservation{
 
     ClientId: string;
     carid: string;
-    rentalstartdate: number;
-    rentalenddate: number;
+    rentalstartdate: Date;
+    rentalenddate: Date;
     pickuplocation: string;
     dropofflocation: string;
     totalprice: number;

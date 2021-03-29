@@ -34,7 +34,7 @@ export class ReservationComponent implements OnInit {
       this.resetForm();
     }
 
-    this.service.getCars().subscribe(data => {
+    this.service.getAvailableCars().subscribe(data => {
       console.log(data);
       this.cars = data;
     })
@@ -54,13 +54,8 @@ export class ReservationComponent implements OnInit {
 
   onSubmit(form: NgForm) {
 
-    this.CreateReservation(form)
-    this.translateService.get("reservation.createsuccessful").subscribe((res: string) => {
-      setTimeout(() => {
-        this.toastrService.info(res);
-      }, 50);
-    });
-    this.router.navigate(['reservationlist']);
+    this.CreateReservation(form);
+    
   }
   resetForm(form?: NgForm) {
 
@@ -69,8 +64,8 @@ export class ReservationComponent implements OnInit {
     this.service.formData = {
       ClientId: '',
       carid: '',
-      rentalstartdate: Date.now(),
-      rentalenddate: Date.now(),
+      rentalstartdate: new Date(),
+      rentalenddate: new Date(),
       pickuplocation: '',
       dropofflocation: '',
       totalprice: 0
@@ -81,6 +76,13 @@ export class ReservationComponent implements OnInit {
     this.service.CreateReservation().subscribe(
       res => {
         this.resetForm(form);
+        this.translateService.get("reservation.createsuccessful").subscribe((res: string) => {
+          setTimeout(() => {
+            this.toastrService.info(res);
+          }, 50);
+        });
+        this.router.navigateByUrl('/', {skipLocationChange: true}).then(()=>
+        this.router.navigate(['reservationlist']));
       },
       err => {
       }

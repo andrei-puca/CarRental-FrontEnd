@@ -1,18 +1,20 @@
-import { Injectable } from '@angular/core';
-import { Price } from '../price/price.model';
-import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { Injectable } from '@angular/core'
+import { Price } from '../price/price.model'
+import { HttpClient, HttpHeaders } from '@angular/common/http'
+import { environment } from 'environments/environment'
+import { ApiPaths } from 'app/shared/settings/api-paths'
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PriceService {
-  formData:Price;
-  readonly rootURL = 'http://localhost:5001'
-  list : Price[];
+  formData: Price
+  readonly baseUrl = environment.baseUrl
+  list: Price[]
 
-constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-priceList(){
-  return this.http.get(this.rootURL+'/Price/GetDetailedPrices');
-}
+  priceList() {
+    return this.http.get(this.baseUrl + ApiPaths.AllPricesDetailed)
+  }
 }
